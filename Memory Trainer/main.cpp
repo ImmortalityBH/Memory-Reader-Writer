@@ -277,3 +277,35 @@ void CreateShorcuts(HWND hWnd)
 	RegisterHotKey(hWnd, MENU_FILE_TERMINATE_PROCESS, MOD_ALT | MOD_NOREPEAT, 0x58u);
 	RegisterHotKey(hWnd, MENU_HELP_ABOUT, MOD_CONTROL | MOD_NOREPEAT, VK_F1);
 }
+
+/*************************SAMPLE_PROGRAM************************
+#include <iostream>
+#include <chrono>
+#include <thread>
+
+void print_each_second(int intRef);
+
+int main()
+{
+	int value = 66;
+	int* valuePtr = &value;
+
+	std::size_t address = reinterpret_cast<std::size_t>(&value);
+
+	std::cout << "Address: " << address << std::endl;
+
+	std::this_thread::sleep_for(std::chrono::seconds(2));
+	while (true)
+	{
+		print_each_second(value);
+	}
+
+	return 0;
+}
+
+void print_each_second(int intRef)
+{
+	std::cout << "Value: " << intRef << std::endl;
+	std::this_thread::sleep_for(std::chrono::seconds(2));
+}
+***************************************************************/
