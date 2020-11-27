@@ -25,7 +25,7 @@ HBRUSH hbr;
 
 const int WIDTH = 800, HEIGHT=  400;
 LPCWSTR className = L"WindowClass";
-LPCWSTR windowTitle = L"Memory Trainer";
+LPCWSTR windowTitle = L"Memory Read-Write";
 
 void AddMenus(HWND hWnd);
 void AddControls(HWND hWnd);
@@ -98,7 +98,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam)
 			DestroyWindow(hWnd);
 			break;
 		case MENU_HELP_ABOUT:
-			MessageBoxW(hWnd, L"Made by PP Gang 2020", L"Memory Trainer 1.0", MB_OK);
+			MessageBoxW(hWnd, L"", L"Memory Trainer 1.0", MB_OK);
 			break;
 		case SAVE_PROCESS_INFO:
 		{
